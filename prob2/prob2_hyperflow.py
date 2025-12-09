@@ -30,8 +30,9 @@ def bfs(src, sink, parent, graph):
             if v == sink:
                 return True
             
-  
-def max_flow_ford(graph, src, sink):
+# Ford-Fulkerson method using Edmonds-Karp algorithm (BFS)
+# Finds shirtest augmenting path, guarantees that the algorithm finishes quickly.
+def max_flow_edmondskarp(graph, src, sink):
     max_flow = 0
     parent = {}
     # Copy the original graph to residual graph
