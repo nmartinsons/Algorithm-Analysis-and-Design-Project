@@ -1,19 +1,19 @@
 1. Total MST Weight: 2537970.46 (rounded to 2 digits after comma).
 2. Exploration process, encountered anomalies, devised solutions, and an analytical review of the algorithms’ efficiency in galactic-scale applications:
-- For finding the MST from the given data file first I use with open function to read the given data file. After that
-I utilize Kruskal's Algorithm, which one of the main algorithms for finding MST. For this algorithm I follow the process, 
-first sorting the edges in increasing order based on the weights. Then I ieterate over the edges and check if they form a cycle.
-For checking if they form a cycle I utilize costom built forms_cycle() function in which I also use DFS for checking cycle formations.
-If adding the endge to the subgraph creates cycle then it is discareded otherwise it is added. Finally, I use Networkx with Metplotlib to 
+- For finding the MST from the given data file, I first use with open function to read the given data file. After that,
+I utilize Kruskal's Algorithm, which is one of the main algorithms for finding MST. For this algorithm I follow the process, 
+first sorting the edges in increasing order based on the weights. Then, I ieterate over the edges and check if they form a cycle.
+For checking if they form a cycle I utilize custom built forms_cycle() function in which I use DFS for checking cycle formations.
+If adding the edge to the subgraph creates a cycle then it is discareded, otherwise it is added. Finally, I use Networkx with Metplotlib to 
 visualize the solution.
-- Time complexity of this algorithm can be calculated as follow:
-    - Reading a file takes O(E) because it takes linear time, where E is the number of lines (edges).
+- Time complexity of this algorithm can be calculated as follows:
+    - Reading a file takes O(E), because it takes linear time, where E is the number of lines (edges).
     - Sort function for sorting edges takes O(E*logE) because Python uses timsort.
     - Forms a cycle function:
         - Graph creating has time complexity of O(V) because we iterate through the MST list edges and it has V-1 edges.
-        - Since algorithm uses MST traversal, the number of edges will be less than number of vertices. Therefore, time complexity
+        - Since algorithm uses MST traversal, the number of edges will be less than the number of vertices. Therefore, time complexity
         of DFS will be O(V), not O(V+E).
-        - The total is O(V)
-    - The total complexity for the algorithm is O(V*E). First, we iterate through sorted edges and checking if they form a cycle, which gives O(V*E).
-    - Since O(V*E) is dominating factor, we get O(V*E) + O(E*logE) = O(V*E)
+        - The total gives us O(V).
+    - The total complexity for the algorithm is O(V*E). First, we iterate through sorted edges and check if they form a cycle, which gives O(V*E).
+    - Since O(V*E) is dominating factor, we get O(V*E) + O(E*logE) = O(V*E).
 
