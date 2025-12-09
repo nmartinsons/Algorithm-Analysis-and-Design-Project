@@ -1,4 +1,4 @@
-# Algorithm Analysis and Design Project
+# Algorithm Analysis and Design Project - Intergalactic Graph Algorithms Expedition
 
 ### Problems solved:
 
